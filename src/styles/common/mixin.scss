@@ -1,0 +1,222 @@
+@mixin flex($jc: flex-start, $ai: flex-start, $flexGap: 0, $direction: row) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  gap: $flexGap;
+  flex-direction: $direction;
+}
+
+@mixin inner {
+  width: $inner-width;
+  margin: 0 auto;
+}
+
+// PARAM font mixin
+
+@mixin h1_bold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $bold_weight;
+  font-size: 3.2rem;
+}
+
+@mixin h1_semibold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $semibold_weight;
+  font-size: 3.2rem;
+}
+
+@mixin h1_medium {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $medium_weight;
+  font-size: 3.2rem;
+}
+
+
+@mixin h2_bold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $bold_weight;
+  font-size: 2.4rem;
+}
+
+@mixin h2_semibold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $semibold_weight;
+  font-size: 2.4rem;
+}
+
+@mixin h2_medium {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $medium_weight;
+  font-size: 2.4rem;
+}
+
+@mixin h2_regular {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $regular_weight;
+  font-size: 2.4rem;
+}
+
+@mixin h3_bold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $bold_weight;
+  font-size: 2rem;
+}
+
+@mixin h3_semibold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $semibold_weight;
+  font-size: 2rem;
+}
+
+@mixin h3_medium {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $medium_weight;
+  font-size: 2rem;
+}
+
+@mixin h3_regular {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $regular_weight;
+  font-size: 2rem;
+}
+
+@mixin subtitle1_bold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $bold_weight;
+  font-size: 1.8rem;
+}
+
+@mixin subtitle1_semibold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $semibold_weight;
+  font-size: 1.8rem;
+}
+
+@mixin subtitle1_medium {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $medium_weight;
+  font-size: 1.8rem;
+}
+
+@mixin subtitle1_regular {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $regular_weight;
+  font-size: 1.8rem;
+}
+
+@mixin subtitle2_bold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $bold_weight;
+  font-size: 1.6rem;
+}
+
+@mixin subtitle2_semibold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $semibold_weight;
+  font-size: 1.6rem;
+}
+
+@mixin subtitle2_medium {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $medium_weight;
+  font-size: 1.6rem;
+}
+
+@mixin subtitle2_regular {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $regular_weight;
+  font-size: 1.6rem;
+}
+
+@mixin body_bold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $bold_weight;
+  font-size: 1.4rem;
+}
+
+@mixin body_semibold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $semibold_weight;
+  font-size: 1.4rem;
+}
+
+@mixin body_medium {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $medium_weight;
+  font-size: 1.4rem;
+}
+
+@mixin body_regular {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $regular_weight;
+  font-size: 1.4rem;
+}
+
+@mixin caption1_bold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $bold_weight;
+  font-size: 1.2rem;
+}
+
+@mixin caption1_semibold {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $semibold_weight;
+  font-size: 1.2rem;
+}
+
+@mixin caption1_medium {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $medium_weight;
+  font-size: 1.2rem;
+}
+
+@mixin caption1_regular {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $regular_weight;
+  font-size: 1.2rem;
+}
+
+@mixin caption2_medium {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $medium_weight;
+  font-size: 1.0rem;
+}
+
+@mixin caption2_regular {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: $regular_weight;
+  font-size: 1.0rem;
+}
+
+@mixin poppins {
+  font-family: 'Poppins', 'Pretendard', 'sans-serif';
+}

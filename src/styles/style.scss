@@ -1,3 +1,10 @@
+// NOTE global
+@import 'src/styles/common/color.scss';
 @import 'src/styles/common/fonts.scss';
-
+@import 'src/styles/common/variable.scss';
+@import 'src/styles/common/mixin.scss';
 @import 'src/styles/common/global.scss';
+
+// NOTE common & base
+@import 'src/styles/components/common/Button.scss';
+@import 'src/styles/components/common/layout/Header.scss';
