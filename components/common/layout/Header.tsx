@@ -13,7 +13,7 @@ const Header: React.FC = () => {
           </div>
           <div className='Header__button-container'>
             <Button>Login</Button>
-            <Button>
+            <Button className='Button--round'>
               <SUN_24 />
             </Button>
           </div>
