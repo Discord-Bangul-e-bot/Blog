@@ -1,0 +1,22 @@
+.Header {
+  width: 100vw;
+  height: $header-height;
+  background: $white;
+  border-bottom: 0.1rem solid $border_01;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  &__inner {
+    @include inner;
+    @include flex(space-between, center);
+    height: 100%;
+  }
+
+  &__title {
+    @include h2_bold;
+    @include poppins;
+    color: $text_05;
+  }
+}
