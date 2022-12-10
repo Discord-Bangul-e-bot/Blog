@@ -12,8 +12,8 @@ const Header: React.FC = () => {
             <Link href='/'>SANDRING Blog</Link>
           </div>
           <div className='Header__button-container'>
-            <Button>Login</Button>
-            <Button className='Button--round'>
+            <Button className='Header__button-login'>Login</Button>
+            <Button className='Header__button-darkmode'>
               <SUN_24 />
             </Button>
           </div>

@@ -10,10 +10,6 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
 
-  &:focus,
-  &:active {
-    outline: none;
-  }
 }
 
 html {
@@ -33,7 +29,6 @@ img {
 }
 
 button {
-  outline: none;
   appearance: none;
   border: none;
   background: none;
