@@ -1,9 +1,13 @@
 import { ReactNode } from 'react';
+import Sidebar from 'components/common/layout/Sidebar';
 
 const Page: React.FC<PageComponentPropType> = (props) => {
   return (
     <section className='Page'>
-      <div className='Page__inner'>{props.children}</div>
+      <div className='Page__inner'>
+        <Sidebar />
+        {props.children}
+      </div>
     </section>
   );
 };
