@@ -1,0 +1,14 @@
+.AutoHeightImage {
+  width: 100%;
+  position: relative;
+
+  span {
+    position: unset !important;
+  }
+
+  &__img {
+    object-fit: contain !important;
+    position: relative !important;
+    height: auto !important;
+  }
+}

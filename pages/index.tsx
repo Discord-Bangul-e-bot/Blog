@@ -10,7 +10,6 @@ export default function Home() {
       <Page>
         <Main />
       </Page>
-
       <Footer />
     </>
   );

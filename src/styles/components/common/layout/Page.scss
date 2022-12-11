@@ -5,5 +5,7 @@
   &__inner {
     @include inner;
     padding: 3.2rem 0 12.8rem 0;
+    display: grid;
+    grid-template-columns: auto 96rem;
   }
 }
