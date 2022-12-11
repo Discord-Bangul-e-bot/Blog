@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
+import Category from 'components/common/Category';
+
 import HOME_24 from 'src/assets/icons/common/home_24.svg';
 import PENCIL_24 from 'src/assets/icons/common/pencil_24.svg';
 import SEARCH_24 from 'src/assets/icons/common/search_24.svg';
@@ -11,6 +13,7 @@ const Sidebar: React.FC = () => {
   return (
     <aside className='Sidebar'>
       <SidebarMenu />
+      <Category className='Sidebar__category' />
     </aside>
   );
 };
