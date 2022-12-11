@@ -1,0 +1,8 @@
+.Page {
+  min-height: 100vh;
+  padding: $header-height 0 $footer-height 0;
+
+  &__inner {
+    @include inner;
+  }
+}
