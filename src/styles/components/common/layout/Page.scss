@@ -1,0 +1,11 @@
+.Page {
+  min-height: 100vh;
+  padding: $header-height 0 $footer-height 0;
+
+  &__inner {
+    @include inner;
+    padding: 3.2rem 0 12.8rem 0;
+    display: grid;
+    grid-template-columns: auto 96rem;
+  }
+}

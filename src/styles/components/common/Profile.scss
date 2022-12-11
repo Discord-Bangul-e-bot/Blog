@@ -1,0 +1,39 @@
+.Profile {
+  @include flex(flex-start, flex-start, 3.4rem);
+
+  &__img {
+    position: relative;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 3.2rem;
+    overflow: hidden;
+  }
+
+  &__name {
+    @include h1_bold;
+    color: $text_05;
+    font-size: 4rem;
+
+    &-container {
+      @include flex(flex-start, center, 1.2rem);
+    }
+  }
+
+  &__info {
+    &-container {
+      padding: 1.6rem 0;
+    }
+  }
+
+  &__id {
+    @include subtitle2_medium;
+    @include poppins;
+    color: $text_03;
+  }
+
+  &__introduce {
+    @include subtitle1_regular;
+    color: $text_02;
+    margin-top: 1.6rem;
+  }
+}
