@@ -1,0 +1,24 @@
+.Footer {
+  width: 100vw;
+  height: 12.4rem;
+  position: fixed;
+  bottom: 0;
+
+  &__inner {
+    @include inner;
+    @include flex(space-between);
+    height: 100%;
+    padding-top: 3.2rem;
+    border-top: 0.1rem solid $border_02;
+  }
+
+  &__copy {
+    @include caption1_regular;
+    @include poppins;
+    color: $text_03;
+  }
+
+  &__design {
+    @extend .Footer__copy;
+  }
+}
