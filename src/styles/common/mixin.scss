@@ -11,6 +11,15 @@
   margin: 0 auto;
 }
 
+@mixin sound_only {
+  font-size: 0;
+  text-indent: -99999;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 // PARAM font mixin
 
 @mixin h1_bold {

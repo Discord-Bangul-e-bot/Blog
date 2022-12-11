@@ -1,0 +1,21 @@
+.Sidebar {
+  &__menu {
+    &-item {
+      margin-top: 3.2rem;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &-text {
+      @include sound_only;
+    }
+  }
+}
