@@ -1,5 +1,5 @@
 .Profile {
-  @include flex(flex-start, flex-start, 3.4rem);
+  @include flex(flex-start, stretch, 3.4rem);
 
   &__img {
     position: relative;
@@ -21,7 +21,9 @@
 
   &__info {
     &-container {
-      padding: 1.6rem 0;
+      display: flex;
+      flex-direction: column;
+      padding: 1.6rem 0 3.2rem 0;
     }
   }
 
@@ -35,5 +37,18 @@
     @include subtitle1_regular;
     color: $text_02;
     margin-top: 1.6rem;
+    flex-grow: 1;
+  }
+
+  &__social {
+    @include flex(flex-start, stretch, 2.4rem);
+
+    &-item {
+      a {
+        @include flex(center, center);
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
 }
