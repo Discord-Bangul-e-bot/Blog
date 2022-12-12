@@ -1,0 +1,6 @@
+.Main {
+  &__TagList {
+    @extend .TagList;
+    margin-top: 4.8rem;
+  }
+}

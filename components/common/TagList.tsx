@@ -2,11 +2,11 @@ import Link from 'next/link';
 import { useMemo } from 'react';
 
 // COMPONENT 태그 리스트 출력
-const TagList = (props: TagListPropsType) => {
+const TagList: React.FC<TagListPropsType> = (props) => {
   return (
-    <ul className='TagList'>
+    <ul className={props.className ? props.className : 'TagList'}>
       {props.list.map((el, idx) => {
-        return <Tag {...el} key={`tag${idx}`} />;
+        return <Tag key={`tag${idx}`} {...el} />;
       })}
     </ul>
   );
@@ -21,7 +21,7 @@ export const Tag = (props: TagPropsType) => {
         {props.hash && props.hash}
         {props.name}
         {props.number ? (
-          <span className='Tag__number'>{props.number}</span>
+          <span className='Tag__number'>{` (${props.number})`}</span>
         ) : null}
       </>
     );
@@ -36,6 +36,7 @@ export const Tag = (props: TagPropsType) => {
 
 // PARAM type
 type TagListPropsType = {
+  [key: string]: any;
   list: TagPropsType[];
 };
 

@@ -7,11 +7,20 @@ const Main = () => {
     { name: 'JavaScript', number: 10, hash: true, link: '#' },
     { name: 'Python', number: 25, hash: true, link: '#' },
     { name: 'Python', number: 3, hash: true, link: '#' },
+    { name: 'JavaScript', number: 10, hash: true, link: '#' },
+    { name: 'Python', number: 25, hash: true, link: '#' },
+    { name: 'Python', number: 3, hash: true, link: '#' },
+    { name: 'JavaScript', number: 10, hash: true, link: '#' },
+    { name: 'Python', number: 25, hash: true, link: '#' },
+    { name: 'Python', number: 3, hash: true, link: '#' },
+    { name: 'JavaScript', number: 10, hash: true, link: '#' },
+    { name: 'Python', number: 25, hash: true, link: '#' },
+    { name: 'Python', number: 3, hash: true, link: '#' },
   ];
   return (
     <section className='Main'>
       <Profile />
-      <TagList list={postTagList} />
+      <TagList className='Main__TagList' list={postTagList} />
       <div className='main'>hello!</div>
     </section>
   );
