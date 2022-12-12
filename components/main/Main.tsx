@@ -4,7 +4,7 @@ import TagList from 'components/common/TagList';
 const Main = () => {
   const postTagList = [
     { name: '전체보기', link: '#' },
-    { name: 'JavaScript', number: 10, hash: true },
+    { name: 'JavaScript', number: 10, hash: true, link: '#' },
     { name: 'Python', number: 25, hash: true, link: '#' },
     { name: 'Python', number: 3, hash: true, link: '#' },
   ];
