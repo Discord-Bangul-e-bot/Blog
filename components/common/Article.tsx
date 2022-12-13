@@ -5,10 +5,14 @@ import TagList, { TagPropsType } from 'components/common/TagList';
 import SAMPLE01 from 'src/assets/images/sample01.png';
 
 // COMPONENT article List
-const ArticleList = () => {
+const ArticleList: React.FC<ArticleListType> = (props) => {
   return (
     <>
-      <ul></ul>
+      <ul className={props.className ? props.className : 'ArticleList'}>
+        {props.list.map((el, idx) => {
+          return <Article key={`post${idx}`} {...el} />;
+        })}
+      </ul>
     </>
   );
 };
@@ -35,10 +39,17 @@ export const Article: React.FC<ArticlePropsType> = (props) => {
 };
 
 // PARAM type
+type ArticleListType = {
+  [key: string]: any;
+  list: ArticlePropsType[];
+};
 type ArticlePropsType = {
+  id: number;
   title: string;
   content: string;
   tag: TagPropsType[];
   comment: number;
   link: string;
 };
+
+export default ArticleList;
