@@ -35,12 +35,12 @@ export const Tag = (props: TagPropsType) => {
 };
 
 // PARAM type
-type TagListPropsType = {
+export type TagListPropsType = {
   [key: string]: any;
   list: TagPropsType[];
 };
 
-type TagPropsType = {
+export type TagPropsType = {
   name: string;
   link?: string;
   hash?: boolean;
