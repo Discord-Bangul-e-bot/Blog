@@ -18,7 +18,7 @@ export const Tag = (props: TagPropsType) => {
   const getText = useMemo((): JSX.Element => {
     return (
       <>
-        {props.hash && props.hash}
+        {props.hash && '# '}
         {props.name}
         {props.number ? (
           <span className='Tag__number'>{` (${props.number})`}</span>

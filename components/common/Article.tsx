@@ -24,14 +24,26 @@ export const Article: React.FC<ArticlePropsType> = (props) => {
       <li className='Article'>
         <Link href={props.link}>
           <div className='Article__thumb'>
-            <AutoHeightImageView src={SAMPLE01} alt='thumbnail image' />
-            <div className='Article__title-container'>
-              <h3 className='Article__title'>{props.title}</h3>
-              <span className='Article__comment'>{`${props.comment}`}</span>
-            </div>
-            <p className='Article__content'>{props.content}</p>
-            <TagList list={props.tag} />
+            <AutoHeightImageView
+              src={SAMPLE01}
+              objectFit='cover'
+              alt='thumbnail image'
+            />
           </div>
+          <div className='Article__title-container'>
+            <h3 className='Article__title'>{props.title}</h3>
+
+            <span className='Article__comment'>
+              {' '}
+              {'['}
+              {`${props.comment}`}
+              {']'}
+            </span>
+          </div>
+          <p className='Article__content'>{props.content}</p>
+          {props.tag && (
+            <TagList className='Article__TagList' list={props.tag} />
+          )}
         </Link>
       </li>
     </>
@@ -47,7 +59,7 @@ type ArticlePropsType = {
   id: number;
   title: string;
   content: string;
-  tag: TagPropsType[];
+  tag?: TagPropsType[];
   comment: number;
   link: string;
 };

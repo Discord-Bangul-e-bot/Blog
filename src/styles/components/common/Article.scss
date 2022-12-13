@@ -1,0 +1,42 @@
+.Article {
+
+  &List {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8rem 2.8rem;
+  }
+
+  &__thumb {
+    width: 100%;
+    height: 18.2rem;
+    position: relative;
+    border-radius: 1.6rem;
+    overflow: hidden;
+  }
+
+  &__title {
+    @include subtitle2_semibold;
+    color: $text_05;
+
+    &-container {
+      @include flex(flex-start, center, 0.4rem);
+      margin-top: 2.4rem;
+    }
+  }
+
+  &__content {
+    @include body_regular;
+    color: $text_03;
+    margin-top: 1.6rem;
+  }
+
+  &__TagList {
+    @extend .TagList;
+    margin-top: 3.2rem;
+  }
+
+  &__comment {
+    @include subtitle2_semibold;
+    color: #FF8080;
+  }
+}
