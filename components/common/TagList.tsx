@@ -18,7 +18,7 @@ export const Tag = (props: TagPropsType) => {
   const getText = useMemo((): JSX.Element => {
     return (
       <>
-        {props.hash && props.hash}
+        {props.hash && '# '}
         {props.name}
         {props.number ? (
           <span className='Tag__number'>{` (${props.number})`}</span>
@@ -35,12 +35,12 @@ export const Tag = (props: TagPropsType) => {
 };
 
 // PARAM type
-type TagListPropsType = {
+export type TagListPropsType = {
   [key: string]: any;
   list: TagPropsType[];
 };
 
-type TagPropsType = {
+export type TagPropsType = {
   name: string;
   link?: string;
   hash?: boolean;

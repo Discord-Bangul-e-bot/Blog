@@ -62,6 +62,7 @@ input[type="number"] {
 }
 
 #__next {
+  overflow: hidden;
   min-height: 100vh;
   position: relative;
 }

@@ -27,11 +27,13 @@
 
     &-login {
       @extend .Button;
+      order: 1;
     }
 
     &-darkmode {
       @extend .Button--round;
       background: $text_01;
+
     }
   }
 }
