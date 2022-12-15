@@ -4,6 +4,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 8rem 2.8rem;
+
+    @media (max-width: $laptop) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: $tablet) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__thumb {
@@ -12,6 +20,11 @@
     position: relative;
     border-radius: 1.6rem;
     overflow: hidden;
+
+    @media(max-width: $tablet) {
+      height: 48vw;
+      max-height: 32rem;
+    }
   }
 
   &__title {

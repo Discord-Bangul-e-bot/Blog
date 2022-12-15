@@ -17,6 +17,11 @@ const Header: React.FC = () => {
               <SUN_24 />
             </Button>
           </div>
+          <button className='Header__menu-button'>
+            <span className='Header__menu-bar'></span>
+            <span className='Header__menu-bar'></span>
+            <span className='Header__menu-bar'></span>
+          </button>
         </div>
       </header>
     </>

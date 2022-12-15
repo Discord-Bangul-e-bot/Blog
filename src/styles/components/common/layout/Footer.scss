@@ -11,6 +11,10 @@
     height: 100%;
     padding-top: 3.2rem;
     border-top: 0.1rem solid $border_02;
+
+    @media (max-width: $laptop) {
+      padding-top: 3.2rem;
+    }
   }
 
   &__copy {

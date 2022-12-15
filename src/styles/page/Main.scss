@@ -9,6 +9,11 @@
       margin-top: 8rem;
       padding-top: 6rem;
       border-top: 0.1rem solid $border_02;
+      transition: padding 0.3s;
+
+      @media (max-width: $tablet) {
+        padding-top: 3.2rem;
+      }
     }
 
     &-title {
@@ -20,6 +25,11 @@
     &List {
       @extend .ArticleList;
       margin-top: 6rem;
+
+      @media (max-width: $tablet) {
+        margin-top: 3.2rem;
+        transition: margin 0.3s;
+      }
     }
   }
 }

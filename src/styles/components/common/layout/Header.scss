@@ -7,6 +7,11 @@
   top: 0;
   left: 0;
   z-index: 999;
+  transition: height 0.3s;
+
+  @media(max-width: $laptop) {
+    height: 7.2rem;
+  }
 
   &__inner {
     @include inner;
@@ -18,11 +23,18 @@
     @include h2_bold;
     @include poppins;
     color: $text_05;
+    transition: font-size 0.3s;
+
+    @media(max-width: $laptop) {
+      @include h3_bold;
+      @include poppins;
+    }
   }
 
   &__button {
     &-container {
       @include flex(flex-start, center, 2.4rem);
+      @include only_pc;
     }
 
     &-login {
@@ -33,7 +45,39 @@
     &-darkmode {
       @extend .Button--round;
       background: $text_01;
+    }
+  }
 
+  &__menu {
+    &-button {
+      @include only_mb;
+      width: 3.2rem;
+      height: 3.2rem;
+      position: relative;
+      cursor: pointer;
+    }
+
+    &-bar {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 0.2rem;
+      background: $text_04;
+      right: 0;
+
+      &:first-child {
+        top: 0.4rem;
+      }
+
+      &:nth-child(2) {
+        width: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0.4rem;
+      }
     }
   }
 }

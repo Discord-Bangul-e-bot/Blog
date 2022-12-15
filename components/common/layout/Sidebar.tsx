@@ -29,7 +29,7 @@ const SidebarMenu: React.FC = () => {
 
   return (
     <nav className='Sidebar__menu'>
-      <ul>
+      <ul className='Sidebar__menu-list'>
         {menuList.map((el) => {
           return <SidebarMenuItem key={el.text} {...el} />;
         })}
