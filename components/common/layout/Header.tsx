@@ -1,4 +1,7 @@
 import Link from 'next/link';
+import { observer } from 'mobx-react';
+import indexStore from 'store/indexStore';
+
 import Button from 'components/common/Button';
 import { SidebarMenu } from 'components/common/layout/Sidebar';
 import Category from 'components/common/Category';
@@ -7,6 +10,10 @@ import SUN_24 from 'src/assets/icons/common/sun_24.svg';
 import CLOSE_18 from 'src/assets/icons/common/close_18.svg';
 
 const Header: React.FC = () => {
+  const onClickMenuBtn = () => {
+    indexStore.setIsOpenSidebar();
+    return;
+  };
   return (
     <>
       <header className='Header'>
@@ -31,7 +38,7 @@ const Header: React.FC = () => {
             <div className='Header__sidebar-close-container'>
               <CLOSE_18 className='Header__sidebar-close-btn' />
             </div>
-            <nav className='Header__sidebar-menu'>
+            <nav className='Header__sidebar-menu' onClick={onClickMenuBtn}>
               <Category />
               <SidebarMenu />
             </nav>
@@ -42,4 +49,4 @@ const Header: React.FC = () => {
   );
 };
 
-export default Header;
+export default observer(Header);
