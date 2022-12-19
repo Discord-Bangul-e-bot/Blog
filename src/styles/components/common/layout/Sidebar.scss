@@ -1,4 +1,6 @@
 .Sidebar {
+  @include only_pc;
+
   &__menu {
     &-item {
       margin-top: 3.2rem;
@@ -12,14 +14,31 @@
       &:hover {
         opacity: 1;
       }
+
+      @media(max-width: $laptop) {
+        margin-top: 0;
+        margin-left: 2.4rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
     }
 
     &-text {
       @include sound_only;
     }
+
+    &-list {
+      @media(max-width: $laptop) {
+        @include flex(flex-start, center);
+      }
+    }
+
   }
 
   &__category {
     margin-top: 12.8rem;
   }
+
 }

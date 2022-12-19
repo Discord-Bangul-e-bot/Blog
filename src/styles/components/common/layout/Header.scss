@@ -7,6 +7,15 @@
   top: 0;
   left: 0;
   z-index: 999;
+  transition: height 0.3s;
+
+  @media(max-width: $laptop) {
+    height: 7.2rem;
+  }
+
+  @media(max-width: $mobile) {
+    height: 5.4rem;
+  }
 
   &__inner {
     @include inner;
@@ -18,11 +27,28 @@
     @include h2_bold;
     @include poppins;
     color: $text_05;
+    transition: font-size 0.3s;
+
+    @media(max-width: $laptop) {
+      @include h3_bold;
+      @include poppins;
+    }
+
+    @media(max-width: $tablet) {
+      @include subtitle1_bold;
+      @include poppins;
+    }
+
+    @media(max-width: $mobile) {
+      @include subtitle2_bold;
+      @include poppins;
+    }
   }
 
   &__button {
     &-container {
       @include flex(flex-start, center, 2.4rem);
+      @include only_pc;
     }
 
     &-login {
@@ -33,7 +59,121 @@
     &-darkmode {
       @extend .Button--round;
       background: $text_01;
+    }
+  }
 
+  &__menu {
+    &-button {
+      @include only_mb;
+      width: 3.2rem;
+      height: 3.2rem;
+      position: relative;
+      cursor: pointer;
+      transition: width 0.3s, height 0.3s;
+
+      @media(max-width: $mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+
+      }
+    }
+
+    &-bar {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 0.2rem;
+      background: $text_04;
+      right: 0;
+
+      &:first-child {
+        top: 0.4rem;
+      }
+
+      &:nth-child(2) {
+        width: 70%;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(3) {
+        bottom: 0.4rem;
+      }
+    }
+  }
+
+  &__sidebar {
+    @include only_mb;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+
+    &-inner {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      padding: 3.2rem;
+      min-width: 28rem;
+      background: $white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: $tablet) {
+        padding: 4.8rem 2.4rem;
+        padding-top: 3.2rem;
+      }
+    }
+
+    &-close {
+      &-container {
+        @include flex(flex-end, center);
+      }
+
+      &-btn {
+        cursor: pointer;
+      }
+    }
+
+    &-menu {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .Category {
+      margin-top: 4.8rem;
+      flex-grow: 1;
+
+      &__title {
+        font-size: 2.4rem;
+      }
+
+      &__menu {
+        margin-top: 3.2rem;
+
+
+
+        &-item {
+          font-size: 1.6rem;
+          margin-top: 2rem;
+        }
+      }
+    }
+
+    .Sidebar {
+      &__menu {
+        margin-top: 4.8rem;
+
+        &-list {
+          justify-content: center;
+        }
+      }
     }
   }
 }

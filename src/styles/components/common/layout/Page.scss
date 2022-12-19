@@ -1,11 +1,27 @@
 .Page {
   min-height: 100vh;
   padding: $header-height 0 $footer-height 0;
+  transition: padding 0.3s;
+
+  @media(max-width: $laptop) {
+    padding-top: 7.2rem;
+  }
 
   &__inner {
     @include inner;
     padding: 3.2rem 0 12.8rem 0;
     display: grid;
     grid-template-columns: auto 96rem;
+
+
+    @media(max-width: 1200px) {
+      padding: 3.2rem 4rem 12.8rem 4rem;
+      grid-template-columns: auto 80rem;
+    }
+
+    @media(max-width: $laptop) {
+      display: block;
+    }
+
   }
 }

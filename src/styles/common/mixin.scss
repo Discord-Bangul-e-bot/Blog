@@ -9,6 +9,16 @@
 @mixin inner {
   width: $inner-width;
   margin: 0 auto;
+
+  @media (max-width:1200px) {
+    width: 100%;
+    padding: 0 4rem;
+  }
+
+  @media(max-width: $mobile) {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
 }
 
 @mixin sound_only {
@@ -18,6 +28,18 @@
   width: 0;
   height: 0;
   overflow: hidden;
+}
+
+@mixin only_pc {
+  @media(max-width: $laptop) {
+    display: none;
+  }
+}
+
+@mixin only_mb {
+  @media(min-width: 1025px) {
+    display: none;
+  }
 }
 
 // PARAM font mixin
