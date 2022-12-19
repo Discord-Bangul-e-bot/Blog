@@ -1,5 +1,15 @@
 .Profile {
   @include flex(flex-start, stretch, 3.4rem);
+  transition: gap 0.3s;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  @media (max-width: $tablet) {
+    align-items: center;
+  }
 
   &__img {
     position: relative;
@@ -7,6 +17,17 @@
     height: 20rem;
     border-radius: 3.2rem;
     overflow: hidden;
+
+    @media (max-width: $laptop) {
+      flex-shrink: 0;
+    }
+
+    @media (max-width: $tablet) {
+      width: 12.8rem;
+      height: 12.8rem;
+      border-radius: 1.6rem;
+    }
+
   }
 
   &__name {
@@ -19,8 +40,18 @@
       @include h1_bold;
     }
 
+    @media (max-width: $tablet) {
+      @include h2_bold;
+    }
+
     &-container {
       @include flex(flex-start, center, 1.2rem);
+      transition: gap 0.3s;
+
+      @media (max-width: $tablet) {
+        gap: 0.8rem;
+        flex-direction: column;
+      }
     }
   }
 
@@ -29,6 +60,12 @@
       display: flex;
       flex-direction: column;
       padding: 1.6rem 0 3.2rem 0;
+
+      @media (max-width: $tablet) {
+        align-items: center;
+        text-align: center;
+      }
+
     }
   }
 
@@ -36,6 +73,11 @@
     @include subtitle2_medium;
     @include poppins;
     color: $text_03;
+    transition: font-size 0.3s;
+
+    @media (max-width: $laptop) {
+      @include body_medium;
+    }
   }
 
   &__introduce {
@@ -43,10 +85,26 @@
     color: $text_02;
     margin-top: 1.6rem;
     flex-grow: 1;
+    line-height: 1.5;
+    word-break: keep-all;
+    transition: font-size 0.3s, margin 0.3s;
+
+    @media (max-width: $laptop) {
+      @include subtitle2_regular;
+    }
+
+    @media (max-width: $tablet) {
+      margin-top: 1.2rem;
+    }
   }
 
   &__social {
     @include flex(flex-start, stretch, 2.4rem);
+
+    @media (max-width: $tablet) {
+      margin-top: 2.4rem;
+      gap: 1.6rem;
+    }
 
     &-item {
       a {

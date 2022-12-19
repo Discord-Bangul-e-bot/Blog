@@ -13,6 +13,10 @@
     height: 7.2rem;
   }
 
+  @media(max-width: $mobile) {
+    height: 5.4rem;
+  }
+
   &__inner {
     @include inner;
     @include flex(space-between, center);
@@ -27,6 +31,16 @@
 
     @media(max-width: $laptop) {
       @include h3_bold;
+      @include poppins;
+    }
+
+    @media(max-width: $tablet) {
+      @include subtitle1_bold;
+      @include poppins;
+    }
+
+    @media(max-width: $mobile) {
+      @include subtitle2_bold;
       @include poppins;
     }
   }
@@ -55,6 +69,13 @@
       height: 3.2rem;
       position: relative;
       cursor: pointer;
+      transition: width 0.3s, height 0.3s;
+
+      @media(max-width: $mobile) {
+        width: 2.4rem;
+        height: 2.4rem;
+
+      }
     }
 
     &-bar {
