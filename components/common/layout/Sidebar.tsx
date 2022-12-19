@@ -19,7 +19,7 @@ const Sidebar: React.FC = () => {
 };
 
 // COMPONENT  사이드바 메뉴
-const SidebarMenu: React.FC = () => {
+export const SidebarMenu: React.FC = () => {
   const menuList = [
     { icon: <HOME_24 />, text: '홈', link: '#' },
     { icon: <PENCIL_24 />, text: '새 글 작성', link: '#' },
