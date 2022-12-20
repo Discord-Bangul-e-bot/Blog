@@ -30,6 +30,10 @@
   overflow: hidden;
 }
 
+@mixin animate($animation, $duration, $method, $times) {
+  animation: $animation $duration $method $times;
+}
+
 @mixin only_pc {
   @media(max-width: $laptop) {
     display: none;
