@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { observer } from 'mobx-react';
-import indexStore from 'store/indexStore';
+import useStore from 'store/useStore';
 
 import Button from 'components/common/Button';
 import { SidebarMenu } from 'components/common/layout/Sidebar';
@@ -11,9 +11,18 @@ import CLOSE_18 from 'src/assets/icons/common/close_18.svg';
 
 const Header: React.FC = () => {
   const onClickMenuBtn = () => {
-    indexStore.setIsOpenSidebar();
+    useStore.headerStore.setIsOpenSidebar();
     return;
   };
+
+  const getIsSidebarClassName = () => {
+    if (useStore.headerStore.isOpenSidebar) {
+      return 'Header__sidebar';
+    } else {
+      return 'Header__sidebar--close';
+    }
+  };
+
   return (
     <>
       <header className='Header'>
@@ -33,12 +42,15 @@ const Header: React.FC = () => {
             <span className='Header__menu-bar'></span>
           </button>
         </div>
-        <div className='Header__sidebar'>
+        <div className={getIsSidebarClassName()}>
           <div className='Header__sidebar-inner'>
             <div className='Header__sidebar-close-container'>
-              <CLOSE_18 className='Header__sidebar-close-btn' />
+              <CLOSE_18
+                className='Header__sidebar-close-btn'
+                onClick={onClickMenuBtn}
+              />
             </div>
-            <nav className='Header__sidebar-menu' onClick={onClickMenuBtn}>
+            <nav className='Header__sidebar-menu'>
               <Category />
               <SidebarMenu />
             </nav>

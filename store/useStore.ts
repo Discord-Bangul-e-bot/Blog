@@ -4,4 +4,6 @@ const indexStore = () => ({
   headerStore,
 });
 
-export default indexStore;
+const useStore = indexStore();
+
+export default useStore;
