@@ -117,23 +117,9 @@
       @extend .Header__sidebar;
       opacity: 0;
       visibility: hidden;
-
-      .Header__sidebar-inner {
-        animation: sidebar_show 0.3s reverse;
-      }
     }
 
     &-inner {
-      @keyframes sidebar_show {
-        from {
-          right: 100%;
-        }
-
-        to {
-          right: 0;
-        }
-      }
-
       position: absolute;
       top: 0;
       right: 0;
@@ -144,7 +130,7 @@
       height: 100vh;
       display: flex;
       flex-direction: column;
-      animation: sidebar_show 0.3s 0.3s;
+      transition: right 0.43s;
 
       @media (max-width: $tablet) {
         padding: 4.8rem 2.4rem;

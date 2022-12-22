@@ -54,7 +54,10 @@ const Header: React.FC = () => {
           </button>
         </div>
         <div className={getIsSidebarClassName()}>
-          <div className='Header__sidebar-inner'>
+          <div
+            className='Header__sidebar-inner'
+            style={useStore.headerStore.sidebarAnimation}
+          >
             <div className='Header__sidebar-close-container'>
               {size.width && size.width > mediaSize.mobileSize ? (
                 <CLOSE_24
