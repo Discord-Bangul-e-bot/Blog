@@ -2,6 +2,7 @@ import { makeAutoObservable } from 'mobx';
 
 export interface headerStoreData {
   isOpenSidebar: boolean;
+  isDarkMode: boolean;
 }
 
 class headerStore {
@@ -10,10 +11,17 @@ class headerStore {
   }
   // PARAM observable
   isOpenSidebar = false;
+  isDarkMode = false;
 
   // FUNCTION action
   setIsOpenSidebar() {
     this.isOpenSidebar = !this.isOpenSidebar;
+    return;
+  }
+  setIsDarkMode(state: boolean) {
+    this.isDarkMode = state;
+    console.log(this.isDarkMode);
+    return;
   }
 
   // FUNCTION computed
@@ -22,6 +30,13 @@ class headerStore {
       return { right: '0' };
     }
     return { right: '-40vw' };
+  }
+
+  get darkModeClassName() {
+    if (!this.isDarkMode) {
+      return 'light';
+    }
+    return 'dark';
   }
 }
 

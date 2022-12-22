@@ -22,7 +22,30 @@ body {
   font-size: 1.4rem;
   user-select: none;
   min-width: 280px;
+
+  @media (prefers-color-scheme:dark) {
+    &::after {
+      content: 'dark';
+      width: 0;
+      height: 0;
+      text-indent: -99999;
+      overflow: hidden;
+      position: absolute;
+    }
+  }
+
+  @media (prefers-color-scheme:light) {
+    &::after {
+      content: 'light';
+      width: 0;
+      height: 0;
+      text-indent: -99999;
+      overflow: hidden;
+      position: absolute;
+    }
+  }
 }
+
 
 a,
 img {

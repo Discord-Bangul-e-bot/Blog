@@ -43,7 +43,14 @@ const Header: React.FC = () => {
           </div>
           <div className='Header__button-container'>
             <Button className='Header__button-login'>Login</Button>
-            <Button className='Header__button-darkmode'>
+            <Button
+              className='Header__button-darkmode'
+              onClick={() =>
+                useStore.headerStore.setIsDarkMode(
+                  !useStore.headerStore.isDarkMode
+                )
+              }
+            >
               <SUN_24 />
             </Button>
           </div>

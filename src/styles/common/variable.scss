@@ -7,3 +7,8 @@ $footer-height: 12.4rem;
 $laptop: 1024px;
 $tablet: 768px;
 $mobile: 480px;
+
+// PARAM darkmode
+$dark: (
+  prefers-color-scheme: dark
+);

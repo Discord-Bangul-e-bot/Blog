@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+
 import mediaSize from 'src/styles/mediaSize';
+import useStore from 'store/useStore';
 
 // FUNCTION 모바일 웹 resize 관련
 export const useResize = () => {
