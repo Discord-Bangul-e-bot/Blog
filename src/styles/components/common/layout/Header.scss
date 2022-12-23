@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   z-index: 999;
-  transition: height 0.3s;
+  transition: height 0.3s, background $transition-dark, border-color $transition-dark;
 
   @media(max-width: $laptop) {
     height: 7.2rem;
@@ -27,7 +27,7 @@
     @include h2_bold;
     @include poppins;
     color: $text_05;
-    transition: font-size 0.3s;
+    transition: font-size 0.3s, color $transition-dark;
 
     @media(max-width: $laptop) {
       @include h3_bold;
@@ -43,6 +43,7 @@
       @include subtitle2_bold;
       @include poppins;
     }
+
   }
 
   &__button {
@@ -182,6 +183,17 @@
           justify-content: center;
         }
       }
+    }
+  }
+}
+
+.dark {
+  .Header {
+    background: $dark_bg_01;
+    border-bottom-color: $dark_border_01;
+
+    &__title {
+      color: $dark_text_05;
     }
   }
 }

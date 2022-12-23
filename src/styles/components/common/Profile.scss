@@ -34,7 +34,7 @@
     @include h1_bold;
     color: $text_05;
     font-size: 4rem;
-    transition: font-size 0.3s;
+    transition: font-size 0.3s, color $transition-dark;
 
     @media (max-width: $laptop) {
       @include h1_bold;
@@ -73,7 +73,7 @@
     @include subtitle2_medium;
     @include poppins;
     color: $text_03;
-    transition: font-size 0.3s;
+    transition: font-size 0.3s, color $transition-dark;
 
     @media (max-width: $laptop) {
       @include body_medium;
@@ -87,7 +87,7 @@
     flex-grow: 1;
     line-height: 1.5;
     word-break: keep-all;
-    transition: font-size 0.3s, margin 0.3s;
+    transition: font-size 0.3s, margin 0.3s, color $transition-dark;
 
     @media (max-width: $laptop) {
       @include subtitle2_regular;
@@ -112,6 +112,22 @@
         width: 100%;
         height: 100%;
       }
+    }
+  }
+}
+
+.dark {
+  .Profile {
+    &__name {
+      color: $dark_text_05;
+    }
+
+    &__id {
+      color: $dark_text_02;
+    }
+
+    &__introduce {
+      color: $dark_text_01;
     }
   }
 }

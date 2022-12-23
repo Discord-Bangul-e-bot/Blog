@@ -9,6 +9,4 @@ $tablet: 768px;
 $mobile: 480px;
 
 // PARAM darkmode
-$dark: (
-  prefers-color-scheme: dark
-);
+$transition-dark: 0.2s;

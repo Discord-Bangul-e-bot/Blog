@@ -23,6 +23,7 @@ body {
   user-select: none;
   min-width: 280px;
 
+
   @media (prefers-color-scheme:dark) {
     &::after {
       content: 'dark';
