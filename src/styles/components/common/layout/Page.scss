@@ -1,7 +1,7 @@
 .Page {
   min-height: 100vh;
   padding: $header-height 0 $footer-height 0;
-  transition: padding 0.3s;
+  transition: padding 0.3s, background $transition-dark;
 
   @media(max-width: $laptop) {
     padding-top: 7.2rem;
@@ -23,5 +23,11 @@
       display: block;
     }
 
+  }
+}
+
+.dark {
+  .Page {
+    background: $dark_bg_01;
   }
 }

@@ -16,6 +16,12 @@
     height: 100%;
     padding-top: 3.2rem;
     border-top: 0.1rem solid $border_02;
+    transition: border-color $transition-dark;
+
+    @media(max-width: 1200px) {
+      padding-top: 3.2rem;
+    }
+
 
     @media (max-width: $laptop) {
       padding-top: 3.2rem;
@@ -33,7 +39,7 @@
     @include caption1_regular;
     @include poppins;
     color: $text_03;
-    transition: font-size 0.3s;
+    transition: font-size 0.3s, color $transition-dark;
 
     @media (max-width: $tablet) {
       @include caption2_regular;
@@ -43,5 +49,17 @@
 
   &__design {
     @extend .Footer__copy;
+  }
+}
+
+.dark {
+  .Footer {
+    &__inner {
+      border-top: 0.1rem solid $dark_border_02;
+    }
+
+    &__copy {
+      color: $text_03;
+    }
   }
 }
