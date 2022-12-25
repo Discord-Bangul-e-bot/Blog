@@ -30,6 +30,7 @@
   &__title {
     @include subtitle2_semibold;
     color: $text_05;
+    transition: color $transition-dark;
 
     &-container {
       @include flex(flex-start, center, 0.4rem);
@@ -41,6 +42,7 @@
     @include body_regular;
     color: $text_03;
     margin-top: 1.6rem;
+    transition: color $transition-dark;
   }
 
   &__TagList {
@@ -51,5 +53,17 @@
   &__comment {
     @include subtitle2_semibold;
     color: #FF8080;
+  }
+}
+
+.dark {
+  .Article {
+    &__title {
+      color: $dark_text_05;
+    }
+
+    &__content {
+      color: $dark_text_01;
+    }
   }
 }

@@ -4,16 +4,26 @@
   &__menu {
     &-item {
       margin-top: 3.2rem;
-      opacity: 0.5;
-      transition: opacity 0.3s;
+
+      a {
+        display: inline-block;
+        opacity: 0.5;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      path {
+        transition: fill $transition-dark;
+      }
 
       &:first-child {
         margin-top: 0;
       }
 
-      &:hover {
-        opacity: 1;
-      }
+
 
       @media(max-width: $laptop) {
         margin-top: 0;
@@ -41,4 +51,16 @@
     margin-top: 12.8rem;
   }
 
+}
+
+.dark {
+  .Sidebar {
+    &__menu {
+      &-item {
+        path {
+          fill: $dark_text_03;
+        }
+      }
+    }
+  }
 }

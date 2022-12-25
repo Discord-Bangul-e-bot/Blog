@@ -25,6 +25,7 @@
       @include h2_bold;
       @include poppins;
       color: $text_05;
+      transition: color $transition-dark;
     }
 
     &List {
@@ -34,6 +35,21 @@
       @media (max-width: $tablet) {
         margin-top: 3.2rem;
         transition: margin 0.3s;
+      }
+    }
+  }
+}
+
+
+.dark {
+  .Main {
+    &__Article {
+      &-section {
+        border-top: 0.1rem solid $dark_border_02;
+      }
+
+      &-title {
+        color: $dark_text_05;
       }
     }
   }

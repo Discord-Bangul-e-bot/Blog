@@ -106,6 +106,10 @@
       gap: 1.6rem;
     }
 
+    path {
+      transition: fill $transition-dark;
+    }
+
     &-item {
       a {
         @include flex(center, center);
@@ -128,6 +132,12 @@
 
     &__introduce {
       color: $dark_text_01;
+    }
+
+    &__social {
+      path {
+        fill: $dark_text_03;
+      }
     }
   }
 }
