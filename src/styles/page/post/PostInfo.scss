@@ -1,0 +1,50 @@
+.PostInfo {
+  &__cate {
+    @include subtitle2_medium;
+    color: $text_03;
+  }
+
+  &__title {
+    @include h1_bold;
+    font-size: 4rem;
+    color: $text_05;
+    font-weight: 900;
+    margin-top: 0.8rem;
+
+    &-container {
+      @include flex(space-between, center);
+    }
+  }
+
+  &__comment {
+    &-number {
+      @include flex(center, center, 0.8rem);
+      @include subtitle1_bold;
+      color: $purple_01;
+    }
+  }
+
+  &__time {
+    @include flex(flex-start, center);
+    @include subtitle1_regular;
+    color: $text_03;
+    margin-top: 2.4rem;
+
+    &-cate {
+      margin-right: 0.4rem;
+    }
+
+    &-item {
+      margin-right: 1.6rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__TagList {
+    @extend .TagList;
+    margin-top: 2.4rem;
+  }
+}
