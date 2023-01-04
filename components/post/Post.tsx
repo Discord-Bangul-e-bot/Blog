@@ -1,4 +1,6 @@
+import Profile from 'components/common/Profile';
 import PostInfo from 'components/post/PostInfo';
+import PostNavigation from 'components/post/PostNavigation';
 
 const Post = () => {
   const postTagList = [
@@ -10,6 +12,9 @@ const Post = () => {
   return (
     <section className='Post'>
       <PostInfo />
+      <section className='Post__content'></section>
+      <Profile />
+      <PostNavigation />
     </section>
   );
 };
