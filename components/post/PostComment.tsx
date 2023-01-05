@@ -1,4 +1,5 @@
 import Button from 'components/common/Button';
+import CommentList from 'components/post/CommentList';
 
 const PostComment = () => {
   return (
@@ -20,6 +21,7 @@ const PostComment = () => {
         <textarea className='PostComment__textarea' />
       </form>
       <Button className='PostComment__submit-button'>댓글 작성</Button>
+      <CommentList />
     </section>
   );
 };
