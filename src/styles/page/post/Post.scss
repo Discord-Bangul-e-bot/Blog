@@ -1,5 +1,13 @@
+@import 'src/styles/page/post/PostInfo.scss';
+@import 'src/styles/page/post/PostNavigation.scss';
+@import 'src/styles/page/post/PostComment.scss';
+
 .Post {
   &__content {
     padding: 10rem 0;
+  }
+
+  .PostComment {
+    margin-top: 6rem;
   }
 }

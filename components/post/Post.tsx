@@ -1,6 +1,7 @@
 import Profile from 'components/common/Profile';
 import PostInfo from 'components/post/PostInfo';
 import PostNavigation from 'components/post/PostNavigation';
+import PostComment from 'components/post/PostComment';
 
 const Post = () => {
   const postTagList = [
@@ -15,6 +16,7 @@ const Post = () => {
       <section className='Post__content'></section>
       <Profile />
       <PostNavigation />
+      <PostComment />
     </section>
   );
 };
