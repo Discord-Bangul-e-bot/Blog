@@ -1,0 +1,71 @@
+.PostComment {
+
+  &__counter {
+    @include subtitle1_medium;
+    color: $text_05;
+
+    &-count {
+      @include subtitle1_bold;
+      color: $purple_01;
+    }
+  }
+
+  &__input {
+    @include body_regular;
+    padding: 1.6rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid $text_01;
+    background: transparent;
+    transition: border $transition-dark;
+
+    &::placeholder {
+      color: $text_01;
+    }
+
+    &:focus {
+      border-color: $purple_01;
+    }
+
+    &-container {
+      display: grid;
+      gap: 1.6rem;
+      grid-template-areas:
+        "input input2"
+        "textarea textarea"
+      ;
+      margin-top: 2rem;
+    }
+
+    &--name {
+      @extend .PostComment__input;
+      grid-area: input;
+    }
+
+    &--password {
+      @extend .PostComment__input;
+      grid-area: input2;
+    }
+  }
+
+  &__textarea {
+    @extend .PostComment__input;
+    height: 14rem;
+    grid-area: textarea;
+    resize: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__submit {
+    &-button {
+      @extend .Button;
+      background-color: $purple_01;
+      margin-top: 1.6rem;
+      margin-right: 0;
+      margin-left: auto;
+
+    }
+  }
+}

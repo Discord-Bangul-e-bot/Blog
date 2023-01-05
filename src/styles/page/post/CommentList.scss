@@ -1,0 +1,11 @@
+.Comment {
+  &Item {
+    &__thumb {
+      position: relative;
+      width: 6rem;
+      height: 6rem;
+      overflow: hidden;
+      border-radius: 100%;
+    }
+  }
+}

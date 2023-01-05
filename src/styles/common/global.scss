@@ -10,6 +10,20 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
 
+  ::selection {
+    background: $purple_01;
+    color: #fff;
+  }
+
+  ::-webkit-selection {
+    background: $purple_01;
+    color: #fff;
+  }
+
+  ::-moz-selection {
+    background: $purple_01;
+    color: #fff;
+  }
 }
 
 html {
@@ -20,7 +34,6 @@ html {
 body {
   font-family: 'Pretendard', 'Poppins', 'sans-serif';
   font-size: 1.4rem;
-  user-select: none;
   min-width: 280px;
 
 

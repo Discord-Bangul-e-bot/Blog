@@ -1,0 +1,37 @@
+.PostNavigation {
+  &__container {
+    @include flex(space-between, center);
+    margin-top: 7.2rem;
+    padding-bottom: 3.2rem;
+    border-bottom: 0.1rem solid $border_02;
+  }
+
+  &__navigation {
+    &--prev {
+      text-align: left;
+    }
+
+    &--next {
+      text-align: right;
+    }
+  }
+
+  &__post {
+    &-category {
+      @include body_regular;
+      color: $text_05;
+    }
+
+    &-title {
+      @include subtitle2_medium;
+      color: $text_05;
+      margin-top: 0.4rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $purple_01;
+      }
+    }
+  }
+
+}

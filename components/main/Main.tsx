@@ -28,7 +28,7 @@ const Main = () => {
         { name: 'Python', hash: true, number: 50 },
       ],
       comment: 0,
-      link: '#',
+      link: '/post/1',
     },
     {
       id: 0,
