@@ -7,6 +7,7 @@ const CommentList = () => {
   return (
     <ul className='CommentList'>
       <CommentItem />
+      <CommentItem />
     </ul>
   );
 };

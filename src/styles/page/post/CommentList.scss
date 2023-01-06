@@ -1,11 +1,60 @@
 .Comment {
+  &List {
+    padding: 2.4rem;
+    background: #FAF9F9;
+  }
+
   &Item {
+    @include flex;
+    margin-top: 4.8rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
     &__thumb {
       position: relative;
       width: 6rem;
       height: 6rem;
       overflow: hidden;
       border-radius: 100%;
+      margin-right: 2.4rem;
+      flex-shrink: 0;
+    }
+
+    &__name {
+      @include subtitle1_bold;
+      color: $text_05;
+
+      &-container {
+        @include flex(flex-start, center, 0.8rem);
+        margin-top: 0.4rem;
+      }
+    }
+
+    &__info {
+      @include flex(space-between, center);
+    }
+
+    &__id {
+      @include caption1_regular;
+      color: $text_03;
+    }
+
+    &__date {
+      @include caption1_regular;
+      color: $text_03;
+
+    }
+
+    &__contents {
+      @include body_regular;
+      color: $text_04;
+      margin-top: 0.8rem;
+
+      &-container {
+        flex-grow: 1;
+      }
     }
   }
 }
