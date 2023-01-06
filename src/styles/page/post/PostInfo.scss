@@ -1,4 +1,7 @@
 .PostInfo {
+  padding-bottom: 5.6rem;
+  border-bottom: 0.1rem solid $border_02;
+
   &__cate {
     @include subtitle2_medium;
     color: $text_03;
